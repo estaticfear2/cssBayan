@@ -1,0 +1,84 @@
+body {
+  font-size: 1.5rem;
+}
+.accordion {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.accordion__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.accordion__item:hover .accordion__content {
+  opacity: 1;
+  transform: scale(1);
+  max-height: 70vh;
+}
+
+.accordion__item:hover .accordion__item-btn {
+  transform: rotate(-45deg);
+}
+
+.accordion__item-title {
+  font-size: 1.8rem;
+  color: blue;
+}
+
+.accordion:hover .accordion__item-title {
+  color: black;
+}
+
+.accordion__radio:checked ~ .accordion__item-title {
+  color: black;
+}
+
+.accordion__radio {
+  display: none;
+}
+
+.accordion__content {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0);
+  max-height: 0;
+  transition: all 0.4s;
+}
+
+.accordion__radio:checked ~ .accordion__content {
+  opacity: 1;
+  transform: scale(1);
+  max-height: 70vh;
+}
+
+.accordion__radio:checked ~ .accordion__item-btn {
+  transform: rotate(-45deg);
+}
+
+.accordion__item-img {
+  width: 60%;
+  height: auto;
+}
+
+.accordion__item-btn {
+  opacity: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: url("./../img/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: rotate(0);
+  transition: opacity, transform 0.4s ease-out;
+}
+
+.accordion:hover .accordion__item-btn {
+  opacity: 1;
+}
