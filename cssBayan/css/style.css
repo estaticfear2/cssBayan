@@ -16,23 +16,10 @@ body {
   cursor: pointer;
 }
 
-.accordion__item:hover .accordion__content {
-  opacity: 1;
-  transform: scale(1);
-  max-height: 70vh;
-}
-
-.accordion__item:hover .accordion__item-btn {
-  transform: rotate(-45deg);
-}
-
 .accordion__item-title {
   font-size: 1.8rem;
   color: blue;
-}
-
-.accordion:hover .accordion__item-title {
-  color: black;
+  transition: color 0.6s;
 }
 
 .accordion__radio:checked ~ .accordion__item-title {
@@ -79,6 +66,24 @@ body {
   transition: opacity, transform 0.4s ease-out;
 }
 
-.accordion:hover .accordion__item-btn {
-  opacity: 1;
+@media (hover:hover) {
+
+  .accordion__item:hover .accordion__content {
+    opacity: 1;
+    transform: scale(1);
+    max-height: 70vh;
+  }
+  
+  .accordion__item:hover .accordion__item-btn {
+    transform: rotate(-45deg);
+  }
+
+  .accordion:hover .accordion__item-title {
+    color: black;
+  }
+
+  .accordion:hover .accordion__item-btn {
+    opacity: 1;
+  }
+
 }
