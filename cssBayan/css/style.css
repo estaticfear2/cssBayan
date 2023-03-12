@@ -55,7 +55,6 @@ body {
 }
 
 .accordion__item-btn {
-  opacity: 0;
   width: 2.5rem;
   height: 2.5rem;
   background-image: url("./../img/icon-plus.svg");
@@ -67,6 +66,10 @@ body {
 }
 
 @media (hover:hover) {
+
+  .accordion__item-btn {
+    opacity: 0;
+  }
 
   .accordion__item:hover .accordion__content {
     opacity: 1;
