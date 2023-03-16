@@ -14,6 +14,7 @@ body {
   padding-bottom: 1rem;
   border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: opacity 0.1s;
 }
 
 .accordion__item-title {
@@ -70,6 +71,10 @@ body {
 
   .accordion__item-btn {
     opacity: 0;
+  }
+
+  .accordion__item:active {
+    opacity: 0.3;
   }
 
   .accordion__item:hover .accordion__content {
